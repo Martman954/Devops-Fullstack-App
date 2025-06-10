@@ -1,16 +1,22 @@
 generated from
 
-frontend:
+frontend on localhost:3000
 npx create-react-app frontend --template typescript
 
-backend:
+backend on localhost:5000
 dotnet new webapi -n BackendApp -o backend
-
-
-
 
 Postgres on port 5432
 
-.NET backend on localhost:5000
 
-React app on localhost:3000
+To Test Data Persistence:
+First run:
+bashdocker-compose up --build
+
+Add some data via your API (POST to /notes)
+
+Stop containers:
+bashdocker-compose down
+
+Start again:
+bashdocker-compose up
