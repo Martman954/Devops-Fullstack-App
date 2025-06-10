@@ -14,7 +14,7 @@ RUN dotnet restore
 COPY . ./
 
 # Create migration if it doesn't exist
-RUN if [ ! -d "Migrations" ]; then dotnet ef migrations add InitialCreate; fi
+#RUN if [ ! -d "Migrations" ]; then dotnet ef migrations add InitialCreate; fi
 
 RUN dotnet publish -c Release -o out
 
