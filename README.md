@@ -1,10 +1,10 @@
-#frontend on localhost:3000
+frontend on [localhost:3000](http://localhost:3000)
 npx create-react-app frontend --template typescript
 
-#backend on localhost:5000
+backend on [localhost:5000](http://localhost:5000/weatherforecast)
 dotnet new webapi -n BackendApp -o backend
 
-#Postgres on port 5432
+Postgres on port 5432
 
 
 To Test Data Persistence:
@@ -19,3 +19,4 @@ docker-compose down
 
 Start again:
 docker-compose up
+
