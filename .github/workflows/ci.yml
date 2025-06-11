@@ -32,7 +32,7 @@ jobs:
           dotnet-version: 8.x
 
       - name: Restore and Test Backend
-        working-directory: backend
+        working-directory: backend/BackendApp
         run: |
           dotnet restore
           dotnet test --no-build --verbosity normal
