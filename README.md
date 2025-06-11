@@ -1,22 +1,39 @@
-frontend on [localhost:3000](http://localhost:3000)
-npx create-react-app frontend --template typescript
+# Fullstack Notes App
 
-backend on [localhost:5000](http://localhost:5000/weatherforecast)
-dotnet new webapi -n BackendApp -o backend
+## Installation
 
-Postgres on port 5432
+### Prerequisites
 
+- Docker
+- Docker Compose
+- Node.js (for local development without Docker)
 
-To Test Data Persistence:
-1. First run:
-docker-compose up --build
+### Project Structure
 
-2. Add some data via your API (POST to /notes)
-http://localhost:5000/swagger
+- **Frontend**  
+  Created with React + TypeScript  
+  Accessible at: [`http://localhost:3000`](http://localhost:3000)  
+  Scaffolded via:
+  ```sh
+  npx create-react-app frontend --template typescript
+  ``` 
 
-Stop containers:
-docker-compose down
+  - **Backend**  
+  Created with React + TypeScript  
+  Accessible at: [`http://localhost:5000`](http://localhost:5000) 
+  Swagget UI: [`http://localhost:5000/swagger`](http://localhost:5000/swagger) 
+  Scaffolded via:
+  ```sh
+  dotnet new webapi -n BackendApp -o backend
+  ``` 
 
-Start again:
-docker-compose up
+#### Running the Application
 
+1. Build and start the containers:
+  ```sh
+  docker-compose up --build
+  ``` 
+2. Then remove the containters with
+```sh
+  docker-compose down
+  ``` 
