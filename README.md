@@ -21,7 +21,7 @@
   - **Backend**  
   Created with React + TypeScript  
   Accessible at: [`http://localhost:5000`](http://localhost:5000) 
-  Swagget UI: [`http://localhost:5000/swagger`](http://localhost:5000/swagger) 
+  Swagget UI: [`http://localhost:5000/swagger`](http://localhost:5000/swagger)
   Scaffolded via:
   ```sh
   dotnet new webapi -n BackendApp -o backend
