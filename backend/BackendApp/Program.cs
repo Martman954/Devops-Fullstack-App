@@ -43,8 +43,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.MapGet("/", () => "Backend App Running...");
 
-// 6. Add POST endpoint to store Note data
+// POST endpoint to store Note data
 app.MapPost("/notes", async (Note note, AppDbContext db) =>
 {
     db.Notes.Add(note);
@@ -52,7 +53,7 @@ app.MapPost("/notes", async (Note note, AppDbContext db) =>
     return Results.Created($"/notes/{note.Id}", note);
 });
 
-// 7. Optional: GET endpoint to retrieve all notes
+// GET endpoint to retrieve all notes
 app.MapGet("/notes", async (AppDbContext db) =>
     await db.Notes.ToListAsync()
 );
